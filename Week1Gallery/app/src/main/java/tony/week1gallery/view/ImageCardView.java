@@ -6,14 +6,17 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import tony.week1gallery.R;
+import tony.week1gallery.model.GalleryItem;
 
 /**
  * Created by tonyk_000 on 9/14/2015.
  */
-public class ImageCardView extends CardView {
-    ImageView galleryImage;
-    TextView galleryImageCaption;
+public final class ImageCardView extends CardView {
+
+    private List<GalleryItem> galleryImages;
 
     //this is just something you have to have when you're making a custom view so you are being specific in your implementation
     public ImageCardView(Context context) {
@@ -35,7 +38,8 @@ public class ImageCardView extends CardView {
         //this takes gallery_image_item and uses the imagecardview (this) as the root layout. The merge in gallery_image_item becomes ImageCardView
     }
     //TODO: gonna take GalleryItem model in its parameter. This will set textview and imageview
-    public void populate(){
-
+    public void populate(GalleryItem galleryItems){
+        ImageView galleryImage = (ImageView)findViewById(R.id.iv_gallery_image);
+        TextView galleryImageCaption = (TextView)findViewById(R.id.tv_caption);
     }
 }
