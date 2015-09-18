@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:andriod="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/iv_gallery_image"
@@ -11,6 +13,11 @@
     <TextView
         android:id="@+id/tv_caption"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_caption"
+        andriod:layout_gravity="center"
+        android:text="@string/vaulString"
+        android:textSize="35dp"
+        android:textColor="@color/primary_text_default_material_dark" />
 
 </merge>
