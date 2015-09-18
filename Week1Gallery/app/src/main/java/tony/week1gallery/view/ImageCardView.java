@@ -6,8 +6,6 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.List;
-
 import tony.week1gallery.R;
 import tony.week1gallery.model.GalleryItem;
 
@@ -15,8 +13,6 @@ import tony.week1gallery.model.GalleryItem;
  * Created by tonyk_000 on 9/14/2015.
  */
 public final class ImageCardView extends CardView {
-
-    private List<GalleryItem> galleryImages;
 
     //this is just something you have to have when you're making a custom view so you are being specific in your implementation
     public ImageCardView(Context context) {

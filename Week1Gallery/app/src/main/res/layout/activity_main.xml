@@ -5,8 +5,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
+    <tony.week1gallery.view.GalleryView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <tony.week1gallery.view.ImageCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    </tony.week1gallery.view.GalleryView>
 
 </RelativeLayout>
