@@ -1,16 +1,12 @@
 package tony.week1gallery.view;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Gallery;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import tony.week1gallery.R;
 import tony.week1gallery.model.GalleryItem;
 
 /**
@@ -18,40 +14,34 @@ import tony.week1gallery.model.GalleryItem;
  */
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewAdapterViewHolder> {
 
-    ImageCardView imageCardView;
-    GalleryItem galleryItem;
+    List<GalleryItem> galleryItemList  = new ArrayList<>();
 
-
-    public ViewAdapter (GalleryItem galleryItem){
-        this.galleryItem = galleryItem;
+    public ViewAdapter (@NonNull List<GalleryItem> galleryItem){this.galleryItemList = galleryItem;
     }
 
     @Override
     public ViewAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        //TODO: make the recyclerview gallery with the split column
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.gallery_view, parent, false);
-        return new ViewAdapterViewHolder(inflate);
+
+        return new ViewAdapterViewHolder(new ImageCardView(parent.getContext()));
     }
 
     @Override
     public void onBindViewHolder(ViewAdapterViewHolder holder, int position) {
-        imageCardView.populate(galleryItem);
+        holder.imageCardView.populate(galleryItemList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return galleryItemList.size();
     }
 
-    protected class ViewAdapterViewHolder extends RecyclerView.ViewHolder {
-        ImageView image;
-        TextView caption;
+    protected static class ViewAdapterViewHolder extends RecyclerView.ViewHolder {
 
+       public ImageCardView imageCardView;
 
-        public ViewAdapterViewHolder(View itemView) {
-            super(itemView);
-            image = (ImageView) itemView.findViewById(R.id.iv_gallery_image);
-            caption = (TextView) itemView.findViewById(R.id.tv_caption);
+        public ViewAdapterViewHolder(ImageCardView imageCardView) {
+            super(imageCardView);
+            this.imageCardView = imageCardView;
         }
 
     }

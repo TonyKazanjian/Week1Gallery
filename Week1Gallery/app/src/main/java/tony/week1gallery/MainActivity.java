@@ -2,16 +2,25 @@ package tony.week1gallery;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import tony.week1gallery.view.ViewAdapter;
+
 public class MainActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    ViewAdapter viewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        recyclerView = (RecyclerView)findViewById(R.id.rv_image_gallery);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setAdapter(viewAdapter);
     }
 
     @Override

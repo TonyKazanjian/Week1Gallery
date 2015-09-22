@@ -32,10 +32,12 @@ public final class ImageCardView extends CardView {
         //TODO: inflate xml layout for this view and set the layout variables (textview and imageview)
          inflate(this.getContext(), R.layout.gallery_image_item, this);
         //this takes gallery_image_item and uses the imagecardview (this) as the root layout. The merge in gallery_image_item becomes ImageCardView
-    }
-    //TODO: gonna take GalleryItem model in its parameter. This will set textview and imageview
-    public void populate(GalleryItem galleryItems){
+        //TODO: reference member variables
         ImageView galleryImage = (ImageView)findViewById(R.id.iv_gallery_image);
         TextView galleryImageCaption = (TextView)findViewById(R.id.tv_caption);
     }
+    //TODO: gonna take GalleryItem model in its parameter. This will set textview and imageview. Taking the parameter and mapping it to the views
+    public void populate(GalleryItem galleryItems){
+
+}
 }

@@ -8,6 +8,7 @@ import android.widget.TextView;
  */
 public class GalleryItem {
 
+    //TODO: change these to image (can be a drawable) and string
     private ImageView image;
     private TextView caption;
 
