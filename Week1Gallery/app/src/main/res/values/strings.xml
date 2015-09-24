@@ -3,5 +3,15 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="batString">This is Batman</string>
+    <string name="commanderString">This is Shepardd</string>
+    <string name="gamesString">Playing games</string>
+    <string name="gokartString">Super Tony-o Kart</string>
+    <string name="harleyString">This is Harley Quinn</string>
+    <string name="jokerString">This is the Joker</string>
+    <string name="magicString">Fun times at the Castle</string>
+    <string name="pizzaString">Pizza time!</string>
+    <string name="tonyString">Tony in space!</string>
     <string name="vaulString">This is Vault Boy</string>
+
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/batman"
+        android:value = "0"/>
+    <item android:drawable="@drawable/commander"
+        android:value = "1"/>
+    <item android:drawable="@drawable/games"
+        android:value = "2"/>
+    <item android:drawable="@drawable/gokart"
+        android:value = "3"/>
+    <item android:drawable="@drawable/harley"
+        android:value = "4"/>
+    <item android:drawable="@drawable/joker"
+        android:value = "5"/>
+    <item android:drawable="@drawable/magic"
+        android:value = "6"/>
+    <item android:drawable="@drawable/pizza"
+        android:value = "7"/>
+    <item android:drawable="@drawable/tonyinspace"
+        android:value = "8"/>
+    <item android:drawable="@drawable/vaultboy"
+        android:value = "9"/>
+
+</selector>
