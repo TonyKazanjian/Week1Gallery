@@ -1,6 +1,7 @@
 package tony.week1gallery.view;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.widget.ImageView;
