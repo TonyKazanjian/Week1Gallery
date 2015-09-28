@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ViewAdapter viewAdapter;
-    ImageCardView imageCardView = new ImageCardView(this,null,0);
-    List<GalleryItem> galleryItems = new ArrayList<>();
+    ImageCardView imageCardView;
+    ImageView mImage;
+    TextView mCaption;
+    GalleryItem mGalleryItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +29,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView)findViewById(R.id.rv_image_gallery);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        viewAdapter = new ViewAdapter(galleryItems);
+        mImage = (ImageView) recyclerView.findViewById(R.id.iv_gallery_image);
+        mCaption = (TextView) recyclerView.findViewById(R.id.tv_caption);
+        viewAdapter = new ViewAdapter(createMockContent(mGalleryItem));
         recyclerView.setAdapter(viewAdapter);
+    }
+
+    private List<GalleryItem> createMockContent(GalleryItem galleryItem){
+
+        int galleryImage = mImage.getId();
+        String galleryCaption = mCaption.toString();
+        galleryItem = new GalleryItem(galleryImage,galleryCaption);
+        List<GalleryItem> galleryItems = new ArrayList<>();
+        galleryItems.add(0,galleryItem);
+        imageCardView = new ImageCardView(this,null,0);
         imageCardView.populate(galleryItems.get(0));
+        return galleryItems;
     }
 
 }
