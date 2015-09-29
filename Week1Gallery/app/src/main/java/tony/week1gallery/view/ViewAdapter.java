@@ -22,6 +22,7 @@ public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.ViewAdapterVie
     @Override
     public ViewAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
+        //creation of ImageCardView happens here
         return new ViewAdapterViewHolder(new ImageCardView(parent.getContext()));
     }
 

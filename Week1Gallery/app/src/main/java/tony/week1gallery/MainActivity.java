@@ -9,17 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tony.week1gallery.model.GalleryItem;
-import tony.week1gallery.view.ImageCardView;
 import tony.week1gallery.view.ViewAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ViewAdapter viewAdapter;
-    ImageCardView imageCardView;
-//    ImageView mImage;
-//    TextView mCaption;
-    GalleryItem mGalleryItem;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,21 +23,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView)findViewById(R.id.rv_image_gallery);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        imageCardView = new ImageCardView(this,null,0);
-//        mImage = (ImageView) recyclerView.findViewById(R.id.iv_gallery_image);
-//        mCaption = (TextView) recyclerView.findViewById(R.id.tv_caption);
-        viewAdapter = new ViewAdapter(createMockContent(mGalleryItem));
+        viewAdapter = new ViewAdapter(createMockContent());
         recyclerView.setAdapter(viewAdapter);
     }
 
-    private List<GalleryItem> createMockContent(GalleryItem galleryItem){
+    private List<GalleryItem> createMockContent(){
 
-//        int galleryImage = mImage.getId();
-//        String galleryCaption = mCaption.toString();
-        //galleryItem = new GalleryItem(galleryImage,galleryCaption);
         List<GalleryItem> galleryItems = new ArrayList<>();
-        galleryItems.add(0,galleryItem);
-        imageCardView.populate(galleryItems.get(0));
+
+        GalleryItem galleryItem1 = new GalleryItem(R.drawable.vaultboy, getString(R.string.vaulString));
+        GalleryItem galleryItem2 = new GalleryItem(R.drawable.batman, getString(R.string.batString));
+        GalleryItem galleryItem3 = new GalleryItem(R.drawable.gokart, getString(R.string.gokartString));
+        GalleryItem galleryItem4 = new GalleryItem(R.drawable.pizza, getString(R.string.pizzaString));
+
+        galleryItems.add(galleryItem1);
+        galleryItems.add(galleryItem2);
+        galleryItems.add(galleryItem3);
+        galleryItems.add(galleryItem4);
+
         return galleryItems;
     }
 
