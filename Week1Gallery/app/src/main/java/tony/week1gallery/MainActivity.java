@@ -16,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ViewAdapter viewAdapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView)findViewById(R.id.rv_image_gallery);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+
         viewAdapter = new ViewAdapter(createMockContent());
         recyclerView.setAdapter(viewAdapter);
     }
@@ -35,11 +35,23 @@ public class MainActivity extends AppCompatActivity {
         GalleryItem galleryItem2 = new GalleryItem(R.drawable.batman, getString(R.string.batString));
         GalleryItem galleryItem3 = new GalleryItem(R.drawable.gokart, getString(R.string.gokartString));
         GalleryItem galleryItem4 = new GalleryItem(R.drawable.pizza, getString(R.string.pizzaString));
+        GalleryItem galleryItem5 = new GalleryItem(R.drawable.commander, getString(R.string.commanderString));
+        GalleryItem galleryItem6 = new GalleryItem(R.drawable.games, getString(R.string.gamesString));
+        GalleryItem galleryItem7 = new GalleryItem(R.drawable.harley, getString(R.string.harleyString));
+        GalleryItem galleryItem8 = new GalleryItem(R.drawable.joker, getString(R.string.jokerString));
+        GalleryItem galleryItem9 = new GalleryItem(R.drawable.magic, getString(R.string.magicString));
+        GalleryItem galleryItem10 = new GalleryItem(R.drawable.tonyinspace, getString(R.string.tonyString));
 
         galleryItems.add(galleryItem1);
         galleryItems.add(galleryItem2);
         galleryItems.add(galleryItem3);
         galleryItems.add(galleryItem4);
+        galleryItems.add(galleryItem5);
+        galleryItems.add(galleryItem6);
+        galleryItems.add(galleryItem7);
+        galleryItems.add(galleryItem8);
+        galleryItems.add(galleryItem9);
+        galleryItems.add(galleryItem10);
 
         return galleryItems;
     }

@@ -8,16 +8,16 @@
         android:id="@+id/iv_gallery_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/vaultboy"/>
+        android:layout_centerVertical="true"/>
 
     <TextView
         android:id="@+id/tv_caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_caption"
-        andriod:layout_gravity="center"
-        android:text="@string/vaulString"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        andriod:layout_centerInParent="true"
         android:textSize="35dp"
-        android:textColor="@color/primary_dark_material_dark" />
+        android:textColor="@color/primary_dark_material_light" />
 
 </merge>
