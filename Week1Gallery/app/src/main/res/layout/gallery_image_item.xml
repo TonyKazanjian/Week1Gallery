@@ -8,13 +8,15 @@
         android:id="@+id/iv_gallery_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_centerVertical="true"/>
 
     <TextView
         android:id="@+id/tv_caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="false"
         android:layout_marginBottom="20dp"
         andriod:layout_centerInParent="true"
         android:textSize="35dp"
