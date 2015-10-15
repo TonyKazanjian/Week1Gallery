@@ -28,12 +28,15 @@ public class FullScreenImageActivity extends AppCompatActivity {
         ImageView fullscreenImage = (ImageView)findViewById(R.id.iv_image_fullscreen);
         fullscreenImage.setImageResource(imageBundle.getInt(Constant.FULLSCREEN_IMAGE_EXTRA));
         //TODO: make sure that we are setting the activity up so that it is in immersive mode
-        fullscreenImage.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        fullscreenImage.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN);
         //TODO: scale the image so it takes as much space as possible, scale appropriately in landscape or portrait
 //        fullscreenImage.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         //TODO: go back to the main activity - when we go in to immersive mode, the toolbar goes away. When whe tap on the screen the toolbar comes back
         this.getSupportActionBar().hide();
     }
-    
+
 }
